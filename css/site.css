@@ -20,21 +20,24 @@ body{
 	text-decoration: none;
 }
 
-.recent-posts-container{
-	background-color: #2c3e50;
-	border-radius: 8px;	
-}
-
-
 .recent-posts{
-	background-color: #34495E;
-	border-radius: 0 8px 8px 0;	
+	background-color: #2C3E50;
+	border-radius: 8px;
+	position: relative;
+	padding: 20px;
 }
 
-.recent-posts-header{
-	width: 100px;
-	margin: 10px auto;
-	color: white;
+.recent-posts:before{
+	content: "";
+border-style: solid;
+border-width: 12px 12px 12px 0;
+border-color: transparent #2C3E50 transparent transparent;
+height: 0px;
+position: absolute;
+left: -12px;
+top: 35px;
+width: 0;
+-webkit-transform: rotate(360deg);
 }
 
 .recent-post-date{
@@ -45,33 +48,27 @@ body{
 
 .recent-posts-img{
 	height: 100px;
-	width: 100px;
-	margin: 30px auto 0 auto;
+	width: 100px;	
 	display: block;
+	text-align: right;
 }
 
 .post-list{
-	list-style-type: none;
-	color: white;
+	list-style-type: none;	
 	margin: 0;
 	padding: 0;
 	border-radius: 0 8px 8px 0;	
 }
 
-.post-list-item:first-child{
-	border-radius: 0px 8px 0px 0px;
+.post-link{
+	padding: 10px 24px 10px 10px;	
+	display: block;	
+	color: white;
+	text-decoration: none;
 }
 
-.post-list-item:last-child{
-	border: none;
-}
-
-.post-list-item{
-	padding: 20px;
-	border-bottom: 1px solid #2c3e50;
-}
-
-.btn-read{
-	font-size: 14px;
-	float: right;	
+.post-link:hover{
+	border-radius: 6px;
+	background-color: #1ABC9C;
+	color: white;
 }
