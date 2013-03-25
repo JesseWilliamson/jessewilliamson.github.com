@@ -4,7 +4,7 @@ title: Home
 ---
  <h1 class="salutation">Hello,</h1>
 	{% for post in site.posts limit:1 %}
-		<p>I'm Jesse and I write here from time to time. I recently published <a class="recent-post" href="{{post.url}}">Foo to the Bar</a>, which is about<span class="about-post">{{post.synopsis}}</span>. Have a read, if you like.</p>
+		<p>I'm Jesse and I write here from time to time. I recently published <a class="recent-post" href="{{post.url}}">{{post.title}}</a>, which is about <span class="about-post">{{post.synopsis}}</span>. Have a read, if you like.</p>
 	{% endfor %}
 	<h4>I've also written</h4>        
 		<ul>

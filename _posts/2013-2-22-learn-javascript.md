@@ -14,8 +14,8 @@ The problem, at least in the .NET world, is this: JavaScript is looked at like a
 
 JavaScript is awesome when you know how to use it. Spend some time with it. I was floored when I started to learn what actual, real JavaScript development could be like. I absolutely love it.
 
-I'm no expert, not by a long-shot. But I'm am significantly better than I was a little as 4 weeks ago, and that's just from reading [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_1?ie=UTF8&amp;qid=1361551984&amp;sr=8-1&amp;keywords=javascript+the+good+parts). That's less than 150 pages of book. That's a weekend (week if you're me*). That's insane. Even if you go no further in your JavaScript studies, you'll be leaps and bounds beyond where you are today.
+I'm no expert, not by a long-shot. But I'm am significantly better than I was a little as 4 weeks ago, and that's just from reading [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742/ref=sr_1_1?ie=UTF8&amp;qid=1361551984&amp;sr=8-1&amp;keywords=javascript+the+good+parts). That's less than 150 pages of book. That's a weekend (week if you're me&#42;). That's insane. Even if you go no further in your JavaScript studies, you'll be leaps and bounds beyond where you are today.
 
 The age of JavaScript isn't coming, it's here. You will need to know it, or you will be left behind.
 
-_*I read slow and have two kids and wife that works part-time at night, I'm busy. So stop laughing._
+_&#42;I read slow and have two kids and wife that works part-time at night, I'm busy. So stop laughing._
