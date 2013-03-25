@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'questrialregular';
+    src: url('../fonts/questrial-regular-webfont.eot');
+    src: url('../fonts/questrial-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/questrial-regular-webfont.woff') format('woff'),
+         url('../fonts/questrial-regular-webfont.ttf') format('truetype'),
+         url('../fonts/questrial-regular-webfont.svg#questrialregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*variables*/
+$tan: #fff6e5;
+$grey: #3e454c;
+$darker-grey: #31373c;
+$code-background: #939f88;
+$code-text: #307360;
+$aqua-ish: #7ecefd;
+$blue: #2185c5;
+$orangey: #ff7f66;
+$btn-text: #f2e9ce;
+
+@mixin rounded-corners{
+	border-radius: 5px;
+}
+
+@mixin flat-button($background, $text){
+	@include rounded-corners;
+	background-color:$background;
+	color: $text;
+	padding: 13px 24px 10px;
+}
+
+@mixin dark-text-shadow{
+	text-shadow: 0px 1px 1px rgba(0,0,0, .2);
+}
+@mixin dark-box-shadow{
+	box-shadow: 0px 1px 2px rgba(0,0,0,.3);
+}
+
+@mixin dark-inset-shadow{
+	box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
+}
+
+@mixin pill-box-shadow{
+	box-shadow: 0px 1px 1px rgba(255,255,255,.2),inset 0px 1px 2px rgba(0,0,0,.3);
+}
+
+@mixin light-text-shadow{
+	text-shadow: 0px 1px 1px rgba(255,255,255,.2);
+}
+
+@mixin gradient-overlay($opacity:.04){
+background-image: -webkit-linear-gradient(top, rgba(255,255,255,$opacity), rgba(0,0,0,$opacity));
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+}
+
+
+body{
+	background-color: $grey;	
+	font-family: "questrialregular";
+}
+
+header{
+	color: #fff;
+	background-color: $aqua-ish;
+	@include gradient-overlay;
+	padding: 5px 0;	
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+	position: fixed;
+	width: 100%
+}
+
+header small{
+	font-size: .65rem;
+	@include dark-text-shadow;
+	opacity: .25;
+	position: relative;
+	top: -7px;
+	left: 7px;
+}
+
+nav {
+	float: right;
+}
+
+nav a{
+	color: #fff;
+	opacity: .85;
+	line-height: 35px;
+	font-weight: 700;
+	padding:5px 10px;
+	@include dark-text-shadow;
+	margin-left: 10px;
+}
+
+nav a:hover{
+	opacity:1;
+	text-decoration:none;
+}
+
+nav .active{
+	color: $darker-grey;
+	@include light-text-shadow;
+	@include pill-box-shadow;
+	border: 1px solid #1a6ca0;
+	border-radius: 3px;
+	background-color: $blue;
+}
+
+header img {
+	float: left;	
+}
+
+header .container{
+	overflow: hidden;
+}
+
+a{
+	color: $orangey;
+	text-decoration: none;
+}
+
+a:hover{	
+	text-decoration: underline;
+}
+
+pre{
+	background-color: $code-background;
+	color: $code-text;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+	margin: 0;
+	padding:0;
+	line-height: 1;
+}
+h1{
+	font-size: 5rem;
+}
+
+footer{
+	color: $tan;
+	@include dark-text-shadow;
+	@include dark-inset-shadow;
+	padding: 20px 0;
+}
+
+.brand{
+	margin: 0;
+	font-size: 2rem;
+}
+
+.post-title{
+	margin-bottom: 40px;
+}
+
+
+.btn{
+	@include flat-button($aqua-ish, $btn-text);
+}
+
+.btn:hover{
+	opacity: .7;
+}
+
+.container{
+	max-width: 700px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+.main{
+	padding: 65px 0 20px 0;
+	background-color: $tan;
+	color: $grey;
+	@include dark-inset-shadow;
+
+}
+.writings p{
+	margin: 0px 0px 20px 0;
+	line-height: 1.5rem;
+}
+
+.writings ul li{
+	padding: 5px 0px 5px 15px;	
+} 
+
+.recent-post{
+	color: $grey;
+	font-weight: 700;
+}
+
+.recent-post:hover{
+	color: $orangey;
+	text-decoration:none;
+}

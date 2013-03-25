@@ -1,121 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Typed Strong</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Loading Bootstrap -->    
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">    
-
-    <!-- Loading Flat UI -->
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/typeplate-unminified.css" rel="stylesheet">
-    <link href="css/site.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
-  <body>    
-    <div class="container-narrow">
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="brand alpha">Typed Strong</h3>        
-        <small class="brand-subtext">The personal website of Jesse Williamson</small>
-      </div>
-      <hr>
-      <div class="row-fluid">
-        <div class="span3">
-          <img src="images/illustrations/colors.png" class="block-list-img pull-right"/>
-          <h4 class="gamma pull-right">Writings</h4>
-        </div>        
-        <div class="recent-posts span9 block-list-container">
-          <ul class="block-list">
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link recent-post-link">           
-                <span class="-post-title">This is a demo post</span>
-                <small class="block-list-subtext">January 1, 2013</small>                 
-              </a>                                                       
-            </li>
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link recent-post-link">           
-                <span class="post-title">This is a demo post</span>
-                <small class="block-list-subtext">January 1, 2013</small>                 
-              </a>                                                       
-            </li>  
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link recent-post-link">           
-                <span class="post-title">This is a demo post</span>
-                <small class="block-list-subtext">January 1, 2013</small>                 
-              </a>                                                       
-            </li>
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link recent-post-link">           
-                <span class="post-title">This is a demo post</span>
-                <small class="block-list-subtext">January 1, 2013</small>                 
-              </a>                                                       
-            </li>
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link recent-post-link">           
-                <span class="post-title">This is a demo post</span>
-                <small class="block-list-subtext">January 1, 2013</small>                 
-              </a>                                                       
-            </li>
-          </ul>        
-      </div>
-    </div>
-    <hr>
-    <div class="row-fluid">              
-        <div class="projects span9 block-list-container">
-          <ul class="block-list">
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link project-link">           
-                <span class="project-title">Dunce</span>
-                <span class="project-description">A stupid idea I had once</span>
-                <small class="block-list-subtext">(C#)</small>
-              </a>
-                                                                                      
-            </li>
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link project-link">           
-                <span class="project-title">Dunce</span>
-                <span class="project-description">A stupid idea I had once</span>
-                <small class="block-list-subtext">(C#)</small>
-              </a>
-            </li>  
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link project-link">           
-                <span class="project-title">Dunce</span>
-                <span class="project-description">A stupid idea I had once</span>
-                <small class="block-list-subtext">(C#)</small>
-              </a>
-            </li>
-            <li class="block-list-item">                 
-              <a href="#" class="block-list-link project-link">           
-                <span class="project-title">Dunce</span>
-                <span class="project-description">A stupid idea I had once</span>
-                <small class="block-list-subtext">(C#)</small>
-              </a>
-            </li>
-          </ul>        
-      </div>
-      <div class="span3">
-          <img src="images/illustrations/settings.png" class="block-list-img pull-left"/>
-          <h4 class="gamma pull-left">Projects</h4>
-        </div> 
-    </div>      
-      <div class="footer">
-        
-      </div>
-
-    </div> <!-- /container -->
-  </body>
-</html>
+---
+layout: default
+title: Home
+---
+ <h1 class="salutation">Hello,</h1>
+	{% for post in site.posts limit:1 %}
+		<p>I'm Jesse and I write here from time to time. I recently published <a class="recent-post" href="{{post.url}}">Foo to the Bar</a>, which is about<span class="about-post">{{post.synopsis}}</span>. Have a read, if you like.</p>
+	{% endfor %}
+	<h4>I've also written</h4>        
+		<ul>
+			{% for post in site.posts offset:1 %}
+	  			<li><a class="recent-post" href="{{post.url}}">Some other title</a></li>
+			{% endfor %}
+		</ul> 
