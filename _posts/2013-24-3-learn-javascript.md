@@ -3,8 +3,7 @@ layout: default
 title: You need to learn JavaScript
 ---      
 
-You Need To Learn JavaScript
-============================
+# You Need To Learn JavaScript
 
 Here's the thing, if you claim to be a web developer, you need to know JavaScript. Real JavaScript. There was a time, not long ago, that we didn't write JavaScript; we wrote [jQuery](http://jquery.com/). That time is gone. The game has changed. I'm shouldn't be telling you anything you don't know.
 
