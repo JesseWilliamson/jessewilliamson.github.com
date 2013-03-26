@@ -75,10 +75,6 @@ a {
 a:hover {
   text-decoration: underline; }
 
-pre {
-  background-color: #939f88;
-  color: #307360; }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -94,10 +90,20 @@ h1 {
   font-size: 5rem; }
 
 footer {
-  color: #fff6e5;
+  color: #757d85;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
   padding: 20px 0; }
+
+footer a:hover {
+  text-decoration: none; }
+
+.footer-logo {
+  text-align: center;
+  opacity: .3;
+  display: block;
+  margin: 0 auto;
+  width: 40px; }
 
 .brand {
   margin: 0;
@@ -121,12 +127,12 @@ footer {
   margin: 0 auto; }
 
 .main {
-  padding: 65px 0 20px 0;
+  padding: 65px 0px 0px 0;
   background-color: #fff6e5;
   color: #3e454c;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3); }
 
-.writings p {
+p {
   margin: 0px 0px 20px 0;
   line-height: 1.5rem; }
 
@@ -140,3 +146,18 @@ footer {
 .recent-post:hover {
   color: #ff7f66;
   text-decoration: none; }
+
+.post-nav {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center; }
+
+.post-nav a {
+  color: inhert;
+  font-size: 3rem;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 0 40px;
+  opacity: .7; }
+
+.post-nav a:hover {
+  text-decoration: none;
+  opacity: 1; }

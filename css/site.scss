@@ -14,12 +14,11 @@
 $tan: #fff6e5;
 $grey: #3e454c;
 $darker-grey: #31373c;
-$code-background: #939f88;
-$code-text: #307360;
 $aqua-ish: #7ecefd;
 $blue: #2185c5;
 $orangey: #ff7f66;
 $btn-text: #f2e9ce;
+$light-grey: rgb(117, 125, 133);
 
 @mixin rounded-corners{
 	border-radius: 5px;
@@ -138,11 +137,6 @@ a:hover{
 	text-decoration: underline;
 }
 
-pre{
-	background-color: $code-background;
-	color: $code-text;
-}
-
 ul{
 	list-style-type: none;
 	margin: 0;
@@ -160,10 +154,22 @@ h1{
 }
 
 footer{
-	color: $tan;
+	color: $light-grey;
 	@include dark-text-shadow;
-	@include dark-inset-shadow;
+	@include dark-inset-shadow;	
 	padding: 20px 0;
+}
+
+footer a:hover{
+	text-decoration:none;
+}
+
+.footer-logo{
+	text-align: center;
+	opacity: .3;
+	display: block;
+	margin:0 auto;
+	width: 40px;
 }
 
 .brand{
@@ -191,13 +197,13 @@ footer{
 }
 
 .main{
-	padding: 65px 0 20px 0;
+	padding: 65px 0px 0px 0;
 	background-color: $tan;
 	color: $grey;
 	@include dark-inset-shadow;
 
 }
-.writings p{
+p{
 	margin: 0px 0px 20px 0;
 	line-height: 1.5rem;
 }
@@ -214,4 +220,22 @@ footer{
 .recent-post:hover{
 	color: $orangey;
 	text-decoration:none;
+}
+
+.post-nav{		
+	@include dark-box-shadow;
+	text-align: center;	
+}
+
+.post-nav a{
+	color: inhert;
+	font-size: 3rem;
+	@include dark-text-shadow;
+	padding: 0 40px;
+	opacity: .7;
+}
+
+.post-nav a:hover{
+	text-decoration: none;
+	opacity: 1;
 }

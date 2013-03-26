@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: You need to learn JavaScript
 synopsis: why I think you need to know JavaScript
 ---      

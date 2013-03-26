@@ -2,6 +2,7 @@
 layout: default
 title: Home
 ---
+<div class="container">
  <h1 class="salutation">Hello,</h1>
 	{% for post in site.posts limit:1 %}
 		<p>I'm Jesse and I write here from time to time. I recently published <a class="recent-post" href="{{post.url}}">{{post.title}}</a>, which is about <span class="about-post">{{post.synopsis}}</span>. Have a read, if you like.</p>
@@ -12,3 +13,4 @@ title: Home
 	  			<li><a class="recent-post" href="{{post.url}}">{{post.title}}</a></li>
 			{% endfor %}
 		</ul> 
+</div>		

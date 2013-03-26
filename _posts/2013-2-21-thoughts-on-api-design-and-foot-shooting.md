@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Thoughts On API Design and Foot Shooting
 synopsis: why I think you need to know JavaScript
 ---      
