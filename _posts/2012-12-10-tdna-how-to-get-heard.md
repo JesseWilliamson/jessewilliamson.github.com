@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Things New Devs Ask: How To Get Heard
-synopsis: my thoughts on API design and usability
+synopsis: how a new dev can get their ideas heard
 ---      
         
 # Things New Devs Ask: What Should We Learn: How To Get Heard          
