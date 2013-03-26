@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thoughts On API Design and Foot Shooting
-synopsis: why I think you need to know JavaScript
+synopsis: my thoughts on API design and usability
 ---      
 # Thoughts On API Design and Foot Shooting
 
