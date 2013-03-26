@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts On API Design and Foot Shooting
+post-title: Thoughts On API Design and Foot Shooting
 synopsis: my thoughts on API design and usability
 ---      
 # Thoughts On API Design and Foot Shooting

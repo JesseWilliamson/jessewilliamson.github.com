@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Things New Devs Ask: What Should We Learn? Frameworks vs Foundations
+post-title: Things New Devs Ask: What Should We Learn? Frameworks vs Foundations
 synopsis: whether frameworks or fundamentals are more important for new devs to learn.
 ---      
 # Things New Devs Ask: What Should We Learn: Frameworks vs Foundations

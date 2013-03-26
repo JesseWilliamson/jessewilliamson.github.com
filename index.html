@@ -10,7 +10,7 @@ title: Home
 	<h4>I've also written</h4>        
 		<ul>
 			{% for post in site.posts offset:1 %}
-	  			<li><a class="recent-post" href="{{post.url}}">{{page.title}}</a></li>
+	  			<li><a class="recent-post" href="{{post.url}}">{{post.post-title}}</a></li>
 			{% endfor %}
 		</ul> 
 </div>		
