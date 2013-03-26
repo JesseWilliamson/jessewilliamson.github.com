@@ -1,6 +1,6 @@
 ---
 layout: post
-post-title: Things New Devs Ask: How To Get Heard
+post-title: Things New Devs Ask -  How To Get Heard
 synopsis: how a new dev can get their ideas heard
 ---      
         
