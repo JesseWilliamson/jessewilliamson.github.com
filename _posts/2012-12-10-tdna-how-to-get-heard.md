@@ -18,6 +18,7 @@ However, there comes a time when the choices of others come around to bite you, 
 But then they don't. Maybe they disagree, maybe, as was my case, they just move on and continue the hackery.
 
 ## The Question
+
 ### _What do you do, when you aren't being heard?_
 
 Keeping in mind my generally timid nature as a result of terrible self-confidence, what do you do when you just arent' being heard? When, for whatever reason, members of your team are so invested in how they've been doing things that they just don't want to hear another way to do it. I guess this goes back to another question I asked, but, well, I finally got up the guts to say what I thought and all I heard was *THUD*. So what then?
