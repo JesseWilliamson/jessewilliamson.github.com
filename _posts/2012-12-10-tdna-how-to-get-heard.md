@@ -4,7 +4,7 @@ title: Things New Devs Ask: How To Get Heard
 synopsis: how a new dev can get their ideas heard
 ---      
         
-# Things New Devs Ask: What Should We Learn: How To Get Heard          
+# Things New Devs Ask: How To Get Heard          
 >Wherein I swallow my pride and ask total n00b questions and expect you to answer them.
 
 ## A Little Background
