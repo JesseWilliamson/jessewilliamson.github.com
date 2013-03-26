@@ -3,7 +3,9 @@ layout: post
 post-title: The End of the World
 synopsis: when my site died and I lost everything
 ---      
-        
+
+# The End of the World        
+
 Not too long ago something terrible happened. I'm not sure exactly what caused it, but I have my theories. Maybe a tiny meteor managed to make it through our atmosphere, and hit land at just the right spot. Maybe it was a that group of ex-KGB agents I had a run-in with; they have a very particular set of skills. Maybe it a server upgrade. Maybe it was ninjas. Probably it was ninjas.
 
 Nobody knows for sure, but whatever it was (it was ninjas!), this site was down. For weeks. I kind of decided to just let it go until I had the time and energy to go through the process of bringing it back online. I don't get a lot of readers, and I don't post that often so no biggie, right? When the time finally came, I just assumed it would be fairly simple; how much damage could be done, after all? Enough.
@@ -18,7 +20,7 @@ Right. Well, my restrictions completely prohibited that. On to plan B: full-on r
 
 Wrong again. The only thing that went as planned was the vanilla install of Orchard.
 
-**Problem 1:** Turns out I don't actually have my theme packaged up. That's OK, because I can just package it up, right? Well, yeah, sure if I have Orchard installed locally. Now, when I say installed, I mean **NSTALLED**, not downloaded and unzipped. Orchard.exe has a packaging command, but it's dependent on the packaging module which only exists if you've got a running instance of Orchard. Once that was done, packaging and installing the theme was also "mad simple, yo!"
+**Problem 1:** Turns out I don't actually have my theme packaged up. That's OK, because I can just package it up, right? Well, yeah, sure if I have Orchard installed locally. Now, when I say installed, I mean **INSTALLED**, not downloaded and unzipped. Orchard.exe has a packaging command, but it's dependent on the packaging module which only exists if you've got a running instance of Orchard. Once that was done, packaging and installing the theme was also "mad simple, yo!"
 
 Honestly, problem 1 was easy to fix. It was just an unexpected pain, but we learn from pain.
 
@@ -29,6 +31,7 @@ OK, quick status check:
 3. Theme packaged
 4. Theme installed
 5. Time to restore that DB, son!
+
 
 The restore function provided by my host worked as you would expect and I had my DB. 
 
