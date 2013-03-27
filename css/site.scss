@@ -137,8 +137,7 @@ a:hover{
 	text-decoration: underline;
 }
 
-ul, ol{
-	list-style-type: none;
+ul, ol{	
 	margin: 0;
 	padding: 0 0 20px 40px;
 }
@@ -233,6 +232,7 @@ li{
 	@include rounded-corners;
 	box-shadow: inset 0 2px 2px rgba(0,0,0,.15), inset 0 0 1px rgba(0,0,0,.1);
 	@include dark-text-shadow;
+	list-style-type: none;
 }
 
 .other-posts li{
