@@ -140,7 +140,7 @@ footer a:hover {
   margin: 0 auto; }
 
 .main {
-  padding: 65px 0px;
+  padding: 65px 0px 20px 0px;
   background-color: #fff6e5;
   color: #3e454c;
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3); }
