@@ -16,7 +16,7 @@ I win. Almost every time. And you're probably saying, "What?! C'mon, man, let th
 
 
 I don't win because I don't like losing, or because I'm a jerk. I win because I'm teaching my daughter how to think about the game (yes, I know it's only checkers). I want her to learn how to play, how to think critically, how to consider the options before her. I want her to know that we learn by failing first, and trying again. And it works! It worked so well that the last time my wife and daughter played, my wife had to actually _try to win_. My 5 year old was thinking moves ahead, considering each option, each outcome, trying to predict where mom was going next. It was awesome.
-## Do As I Say, Not As I Do<
+## Do As I Say, Not As I Do
 
 Here's the thing, I know that the relationship between failure and deep understanding exists absolutely. I'm a self-taught developer. Up to this point, I've only learned by failing (and a few community college courses, sure). Yet I've come to realize something about myself: I'm afraid of taking that first step and failing. I'm not sure why exactly, but I have an idea.
 
