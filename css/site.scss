@@ -228,7 +228,7 @@ li{
 }
 
 .other-posts{
-	padding: 20px;
+	padding: 20px 0;
 	background-color: #3e454c;
 	@include rounded-corners;
 	box-shadow: inset 0 2px 2px rgba(0,0,0,.15), inset 0 0 1px rgba(0,0,0,.1);
@@ -237,6 +237,11 @@ li{
 
 .other-posts li{
 	line-height: 2rem;
+	padding: 0 20px;
+}
+
+.recent-post{
+	display: block;
 }
 
 .recent-post:hover{
