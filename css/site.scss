@@ -237,15 +237,19 @@ li{
 
 .other-posts li{
 	line-height: 2rem;
-	padding: 0 20px;
+	padding: 0 10px;
 }
 
-.recent-post{
+li .recent-post{
 	display: block;
+	padding: 0 10px;
+	@include rounded-corners;
 }
 
-.recent-post:hover{
+li .recent-post:hover{
 	text-decoration: none;
+	background-color: rgba(255,255,255,.05);
+
 }
 
 .post-nav{		
