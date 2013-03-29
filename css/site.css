@@ -1,174 +1,47 @@
-@font-face {
-  font-family: 'questrialregular';
-  src: url("../fonts/questrial-regular-webfont.eot");
-  src: url("../fonts/questrial-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/questrial-regular-webfont.woff") format("woff"), url("../fonts/questrial-regular-webfont.ttf") format("truetype"), url("../fonts/questrial-regular-webfont.svg#questrialregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+/*
+Syntax error: Invalid CSS after "$tan: ": expected expression (e.g. 1px, bold), was "##efeddf;"
+        on line 14 of site.scss
 
-/*variables*/
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+9:     font-style: normal;
+10: }
+11: 
+12: 
+13: /*variables*/
+14: $tan: ##efeddf;
+15: $grey: #3e454c;
+16: $darker-grey: #31373c;
+17: $aqua-ish: #7ecefd;
+18: $blue: #2185c5;
+19: $orangey: #ff7f66;
 
-html, body {
-  height: 100%; }
-
-body {
-  background-color: #3e454c;
-  font-family: "questrialregular"; }
-
-header {
-  color: #fff;
-  background-color: #7ecefd;
-  padding: 5px 0;
-  position: fixed;
-  width: 100%; }
-
-header small {
-  font-size: .65rem;
-  opacity: .25;
-  position: relative;
-  top: -7px;
-  left: 7px; }
-
-nav {
-  float: right; }
-
-nav a {
-  color: #2185c5;
-  line-height: 35px;
-  padding: 5px 10px;
-  margin-left: 10px; }
-
-nav a:hover {
-  text-decoration: none;
-  color: #fff; }
-
-nav .active {
-  color: #fff;
-  border-radius: 3px;
-  background-color: #2185c5; }
-
-header img {
-  float: left; }
-
-header .container {
-  overflow: hidden; }
-
-a {
-  color: #ff7f66;
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-ul, ol {
-  margin: 0;
-  padding: 0 0 20px 40px; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  margin: 20px 0;
-  padding: 0;
-  line-height: 1; }
-
-h1 {
-  font-size: 5rem;
-  margin-top: 0; }
-
-blockquote {
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  background-color: #e4e3d5;
-  margin-bottom: 20px; }
-
-blockquote p {
-  margin: 0; }
-
-footer {
-  color: #757d85;
-  padding: 20px 0; }
-
-footer a:hover {
-  text-decoration: none; }
-
-.footer-logo {
-  text-align: center;
-  opacity: .3;
-  display: block;
-  margin: 0 auto;
-  width: 40px; }
-
-.brand {
-  margin: 0;
-  font-size: 2rem; }
-
-.post-title {
-  margin-bottom: 40px; }
-
-.btn {
-  border-radius: 5px;
-  background-color: #7ecefd;
-  color: #f2e9ce;
-  padding: 13px 24px 10px; }
-
-.btn:hover {
-  opacity: .7; }
-
-.container {
-  max-width: 700px;
-  padding: 0 40px;
-  margin: 0 auto; }
-
-.main {
-  padding: 65px 0px 20px 0px;
-  background-color: #fff6e5;
-  color: #3e454c; }
-
-p {
-  margin: 0px 0px 20px 0;
-  line-height: 1.5rem; }
-
-li {
-  line-height: 1.5rem; }
-
-.other-posts {
-  padding: 20px 0;
-  background-color: #fff;
-  border-radius: 5px;
-  list-style-type: none;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); }
-
-.other-posts h2 {
-  margin: 0 20px; }
-
-.other-posts ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
-.other-posts li {
-  line-height: 2rem;
-  padding: 0 10px; }
-
-li .recent-post {
-  display: block;
-  padding: 0 10px; }
-
-.post-nav {
-  text-align: center; }
-
-.post-nav a {
-  color: inhert;
-  font-size: 3rem;
-  padding: 0 40px;
-  opacity: .7; }
-
-.post-nav a:hover {
-  text-decoration: none;
-  opacity: 1; }
+Backtrace:
+site.scss:14
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:1136:in `expected'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/script/lexer.rb:199:in `expected!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/script/parser.rb:471:in `assert_expr'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/script/parser.rb:49:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:1010:in `sass_script'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:502:in `variable'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:541:in `block_child'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:534:in `block_contents'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:70:in `stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/scss/parser.rb:27:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/engine.rb:342:in `_to_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:299:in `block in watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.5/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"$tan: \": expected expression (e.g. 1px, bold), was \"##efeddf;\"\A         on line 14 of site.scss\A \A 9:     font-style: normal;\A 10: }\A 11: \A 12: \A 13: /*variables*/\A 14: $tan: ##efeddf;\A 15: $grey: #3e454c;\A 16: $darker-grey: #31373c;\A 17: $aqua-ish: #7ecefd;\A 18: $blue: #2185c5;\A 19: $orangey: #ff7f66;"; }
