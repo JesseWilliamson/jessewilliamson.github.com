@@ -31,27 +31,9 @@ $light-grey: rgb(117, 125, 133);
 	padding: 13px 24px 10px;
 }
 
-@mixin dark-text-shadow{
-	text-shadow: 0px 1px 1px rgba(0,0,0, .2);
-}
+
 @mixin dark-box-shadow{
-	box-shadow: 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin dark-inset-shadow{
-	box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin pill-box-shadow{
-	box-shadow: 0px 1px 1px rgba(255,255,255,.2),inset 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin light-text-shadow{
-	text-shadow: 0px 1px 1px rgba(255,255,255,.2);
-}
-
-@mixin gradient-overlay($opacity:.04){
-background-image: -webkit-linear-gradient(top, rgba(255,255,255,$opacity), rgba(0,0,0,$opacity));
+	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
 }
 
 *{
@@ -147,6 +129,7 @@ h1{
 blockquote{
 	padding: 10px;
 	@include rounded-corners;
+	@include dark-box-shadow;
 	background-color: #e4e3d5;	
 	margin-bottom: 20px;
 }
@@ -214,7 +197,7 @@ li{
 	background-color: #fff;
 	@include rounded-corners;	
 	list-style-type: none;
-	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+	@include dark-box-shadow;
 }
 
 .other-posts li{
