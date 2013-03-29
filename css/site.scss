@@ -147,8 +147,7 @@ h1{
 blockquote{
 	padding: 10px;
 	@include rounded-corners;
-	background-color: rgba(163, 151, 128, 0.8);	
-	color: #fff6e5;	
+	background-color: #e4e3d5;	
 	margin-bottom: 20px;
 }
 
@@ -212,9 +211,10 @@ li{
 
 .other-posts{
 	padding: 20px 0;
-	background-color: #3e454c;
+	background-color: #fff;
 	@include rounded-corners;	
 	list-style-type: none;
+	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
 }
 
 .other-posts li{
@@ -224,14 +224,7 @@ li{
 
 li .recent-post{
 	display: block;
-	padding: 0 10px;
-	@include rounded-corners;
-}
-
-li .recent-post:hover{
-	text-decoration: none;
-	background-color: rgba(255,255,255,.05);
-
+	padding: 0 10px;	
 }
 
 .post-nav{			
