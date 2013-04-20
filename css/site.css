@@ -25,9 +25,7 @@ body {
 header {
   color: #1abc9c;
   background-color: #34495e;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.04));
   padding: 5px 0;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   position: fixed;
   width: 100%; }
 
@@ -87,12 +85,10 @@ h1 {
 blockquote {
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(163, 151, 128, 0.8);
-  /*todo mixin*/
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.1);
-  color: #fff6e5;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px; }
+  background-color: #ecf0f1;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.1); }
 
 blockquote p {
   margin: 0; }
@@ -134,12 +130,24 @@ li {
 .other-posts {
   padding: 20px 0;
   background-color: #ecf0f1;
-  border-radius: 5px;
+  border-radius: 5px; }
+
+.other-posts h2 {
+  border-radius: 5px 5px 0 0;
+  margin: 0px 0px 20px 0px;
+  padding: 10px 20px;
+  background-color: #ff7f66;
+  color: white; }
+
+.other-posts ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none; }
 
 .other-posts li {
   line-height: 2rem;
-  padding: 0 10px; }
+  padding: 0 10px;
+  margin-bottom: 10px; }
 
 li .recent-post {
   display: block;

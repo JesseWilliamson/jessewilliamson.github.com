@@ -7,10 +7,12 @@ title: Home
 	{% for post in site.posts limit:1 %}
 		<p>I'm Jesse and I write here from time to time. I recently published "<a class="recent-post" href="{{post.url}}">{{post.post-title}}</a>", which is about <span class="about-post">{{post.synopsis}}</span>. Have a read, if you like.</p>
 	{% endfor %}
-	<h4>Other Writings</h4>        
-		<ul class="other-posts">
+	<div class="other-posts">
+		<h2>Other Writings</h2>        
+		<ul>
 			{% for post in site.posts offset:1 %}
 	  			<li><a class="recent-post" href="{{post.url}}">{{post.post-title}}</a></li>
 			{% endfor %}
 		</ul> 
+	</div>
 </div>		

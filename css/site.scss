@@ -63,8 +63,6 @@ $footer-background: $asbestos;
 $footer-text: $silver;
 $footer-links: $clouds;
 
-
-
 @mixin rounded-corners{
 	border-radius: 5px;
 }
@@ -76,27 +74,9 @@ $footer-links: $clouds;
 	padding: 13px 24px 10px;
 }
 
-@mixin dark-text-shadow{
-	text-shadow: 0px 1px 1px rgba(0,0,0, .2);
-}
+
 @mixin dark-box-shadow{
-	box-shadow: 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin dark-inset-shadow{
-	box-shadow: inset 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin pill-box-shadow{
-	box-shadow: 0px 1px 1px rgba(255,255,255,.2),inset 0px 1px 2px rgba(0,0,0,.3);
-}
-
-@mixin light-text-shadow{
-	text-shadow: 0px 1px 1px rgba(255,255,255,.2);
-}
-
-@mixin gradient-overlay($opacity:.04){
-background-image: -webkit-linear-gradient(top, rgba(255,255,255,$opacity), rgba(0,0,0,$opacity));
+	box-shadow: 0px 1px 2px rgba(0,0,0,.2);
 }
 
 *{
@@ -120,10 +100,8 @@ body{
 
 header{
 	color: $header-text;
-	background-color: $header-background;
-	@include gradient-overlay;
-	padding: 5px 0;	
-	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+	background-color: $header-background;	
+	padding: 5px 0;			
 	position: fixed;
 	width: 100%
 }
@@ -143,14 +121,14 @@ nav {
 nav a{	
 	opacity: .85;
 	line-height: 35px;
-	font-weight: 700;
+	font-weight: 700;	
 	padding:5px 10px;	
 	margin-left: 10px;
 }
 
-nav a:hover{
-	opacity:1;
-	text-decoration:none;
+nav a:hover{	
+	opacity: 1;
+	text-decoration:none;	
 }
 
 nav .active{
@@ -194,13 +172,11 @@ h1{
 
 blockquote{
 	padding: 10px;
-	@include rounded-corners;
-	background-color: rgba(163, 151, 128, 0.8);
-	/*todo mixin*/
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.15), inset 0 0 1px rgba(0,0,0,.1);
-	color: #fff6e5;
-	@include dark-text-shadow;	
+	@include rounded-corners;	
+	background-color: $clouds;
 	margin-bottom: 20px;
+	color: white;
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.15), inset 0 0 1px rgba(0,0,0,.1);
 }
 
 blockquote p{
@@ -237,7 +213,7 @@ footer a:hover{
 .main{
 	padding: 65px 0px 20px 0px;
 	background-color: $primary-background;
-	color: $primary-text;	
+	color: $primary-text;
 }
 p{
 	margin: 0px 0px 20px 0;
@@ -250,13 +226,26 @@ li{
 .other-posts{
 	padding: 20px 0;
 	background-color: $container-background;
-	@include rounded-corners;		;
-	list-style-type: none;
+	@include rounded-corners;
 }
 
+.other-posts h2{
+	border-radius: 5px 5px 0 0;
+margin: 0px 0px 20px 0px;
+padding: 10px 20px;
+background-color: #ff7f66;
+color: white;
+}
+
+.other-posts ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
 .other-posts li{
 	line-height: 2rem;
 	padding: 0 10px;
+	margin-bottom: 10px;
 }
 
 li .recent-post{
@@ -270,7 +259,6 @@ li .recent-post:hover{
 	text-decoration: none;
 	background-color: $container-link-background-hover;
 	color: $container-link-hover;
-
 }
 
 .post-nav{			
