@@ -6,6 +6,7 @@
   font-style: normal; }
 
 /*variables*/
+/*contextual colors*/
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +19,12 @@ html, body {
   height: 100%; }
 
 body {
-  background-color: #3e454c;
+  background-color: #7f8c8d;
   font-family: "questrialregular"; }
 
 header {
-  color: #fff;
-  background-color: #7ecefd;
+  color: #1abc9c;
+  background-color: #34495e;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.04));
   padding: 5px 0;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -32,7 +33,6 @@ header {
 
 header small {
   font-size: .65rem;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   opacity: .25;
   position: relative;
   top: -7px;
@@ -42,12 +42,10 @@ nav {
   float: right; }
 
 nav a {
-  color: #fff;
   opacity: .85;
   line-height: 35px;
   font-weight: 700;
   padding: 5px 10px;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   margin-left: 10px; }
 
 nav a:hover {
@@ -55,12 +53,9 @@ nav a:hover {
   text-decoration: none; }
 
 nav .active {
-  color: #31373c;
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2);
-  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.2), inset 0px 1px 2px rgba(0, 0, 0, 0.3);
-  border: 1px solid #1a6ca0;
+  color: #34495e;
   border-radius: 3px;
-  background-color: #2185c5; }
+  background-color: #1abc9c; }
 
 header img {
   float: left; }
@@ -69,7 +64,7 @@ header .container {
   overflow: hidden; }
 
 a {
-  color: #ff7f66;
+  color: #1abc9c;
   text-decoration: none; }
 
 a:hover {
@@ -103,9 +98,7 @@ blockquote p {
   margin: 0; }
 
 footer {
-  color: #757d85;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #bdc3c7;
   padding: 20px 0; }
 
 footer a:hover {
@@ -118,21 +111,8 @@ footer a:hover {
   margin: 0 auto;
   width: 40px; }
 
-.brand {
-  margin: 0;
-  font-size: 2rem; }
-
 .post-title {
   margin-bottom: 40px; }
-
-.btn {
-  border-radius: 5px;
-  background-color: #7ecefd;
-  color: #f2e9ce;
-  padding: 13px 24px 10px; }
-
-.btn:hover {
-  opacity: .7; }
 
 .container {
   max-width: 700px;
@@ -141,9 +121,8 @@ footer a:hover {
 
 .main {
   padding: 65px 0px 20px 0px;
-  background-color: #fff6e5;
-  color: #3e454c;
-  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3); }
+  background-color: white;
+  color: #2c3e50; }
 
 p {
   margin: 0px 0px 20px 0;
@@ -154,10 +133,8 @@ li {
 
 .other-posts {
   padding: 20px 0;
-  background-color: #3e454c;
+  background-color: #ecf0f1;
   border-radius: 5px;
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.1);
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   list-style-type: none; }
 
 .other-posts li {
@@ -167,11 +144,13 @@ li {
 li .recent-post {
   display: block;
   padding: 0 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  color: #7f8c8d; }
 
 li .recent-post:hover {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.05); }
+  background-color: #7f8c8d;
+  color: white; }
 
 .post-nav {
   text-align: center; }
@@ -179,7 +158,6 @@ li .recent-post:hover {
 .post-nav a {
   color: inhert;
   font-size: 3rem;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   padding: 0 40px;
   opacity: .7; }
 

@@ -11,14 +11,59 @@
 
 
 /*variables*/
-$tan: #fff6e5;
-$grey: #3e454c;
-$darker-grey: #31373c;
-$aqua-ish: #7ecefd;
-$blue: #2185c5;
-$orangey: #ff7f66;
-$btn-text: #f2e9ce;
-$light-grey: rgb(117, 125, 133);
+$turquoise: #1ABC9C;
+$green-sea: #16A085;
+
+$emerland: #2ECC71;
+$nephritis: #27AE60;
+
+$peter-river: #3498DB;
+$belize-hole: #2980B9;
+
+$amethyst: #9B59B6;
+$wisteria: #8E44AD;
+
+$wet-asphalt: #34495E;
+$midnight-blue: #2C3E50;
+
+$sun-flower: #F1C40F;
+$orange: #F39C12;
+
+$carrot: #E67E22;
+$pumpkin: #D35400;
+
+$alizarin: #E74C3C;
+$pomegranate: #C0392B;
+
+$clouds: #ECF0F1;
+$silver: #BDC3C7;
+
+$concrete: #95A5A6;
+$asbestos: #7F8C8D;
+
+/*contextual colors*/
+$header-background: $wet-asphalt;
+$header-text: $turquoise;
+
+$nav-active-background: $turquoise;
+$nav-active-text: $wet-asphalt;
+
+$primary-background: #fff;
+$primary-text: $midnight-blue;
+$primary-links: $turquoise;
+
+$container-background: $clouds;
+$container-header-background: $turquoise;
+$container-header-text: #fff;
+$container-link: $asbestos;
+$container-link-hover: #fff;
+$container-link-background-hover: $asbestos;
+
+$footer-background: $asbestos;
+$footer-text: $silver;
+$footer-links: $clouds;
+
+
 
 @mixin rounded-corners{
 	border-radius: 5px;
@@ -69,13 +114,13 @@ html, body{
 
 
 body{
-	background-color: $grey;	
+	background-color: $footer-background;	
 	font-family: "questrialregular";
 }
 
 header{
-	color: #fff;
-	background-color: $aqua-ish;
+	color: $header-text;
+	background-color: $header-background;
 	@include gradient-overlay;
 	padding: 5px 0;	
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
@@ -84,8 +129,7 @@ header{
 }
 
 header small{
-	font-size: .65rem;
-	@include dark-text-shadow;
+	font-size: .65rem;	
 	opacity: .25;
 	position: relative;
 	top: -7px;
@@ -96,13 +140,11 @@ nav {
 	float: right;
 }
 
-nav a{
-	color: #fff;
+nav a{	
 	opacity: .85;
 	line-height: 35px;
 	font-weight: 700;
-	padding:5px 10px;
-	@include dark-text-shadow;
+	padding:5px 10px;	
 	margin-left: 10px;
 }
 
@@ -112,12 +154,9 @@ nav a:hover{
 }
 
 nav .active{
-	color: $darker-grey;
-	@include light-text-shadow;
-	@include pill-box-shadow;
-	border: 1px solid #1a6ca0;
+	color: $nav-active-text;
 	border-radius: 3px;
-	background-color: $blue;
+	background-color: $nav-active-background;
 }
 
 header img {
@@ -129,7 +168,7 @@ header .container{
 }
 
 a{
-	color: $orangey;
+	color: $primary-links;
 	text-decoration: none;
 }
 
@@ -169,9 +208,7 @@ blockquote p{
 }
 
 footer{
-	color: $light-grey;
-	@include dark-text-shadow;
-	@include dark-inset-shadow;	
+	color: $footer-text;
 	padding: 20px 0;
 }
 
@@ -187,22 +224,8 @@ footer a:hover{
 	width: 40px;
 }
 
-.brand{
-	margin: 0;
-	font-size: 2rem;
-}
-
 .post-title{
 	margin-bottom: 40px;
-}
-
-
-.btn{
-	@include flat-button($aqua-ish, $btn-text);
-}
-
-.btn:hover{
-	opacity: .7;
 }
 
 .container{
@@ -213,10 +236,8 @@ footer a:hover{
 
 .main{
 	padding: 65px 0px 20px 0px;
-	background-color: $tan;
-	color: $grey;
-	@include dark-inset-shadow;
-
+	background-color: $primary-background;
+	color: $primary-text;	
 }
 p{
 	margin: 0px 0px 20px 0;
@@ -228,10 +249,8 @@ li{
 
 .other-posts{
 	padding: 20px 0;
-	background-color: #3e454c;
-	@include rounded-corners;
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.15), inset 0 0 1px rgba(0,0,0,.1);
-	@include dark-text-shadow;
+	background-color: $container-background;
+	@include rounded-corners;		;
 	list-style-type: none;
 }
 
@@ -244,11 +263,13 @@ li .recent-post{
 	display: block;
 	padding: 0 10px;
 	@include rounded-corners;
+	color: $container-link
 }
 
 li .recent-post:hover{
 	text-decoration: none;
-	background-color: rgba(255,255,255,.05);
+	background-color: $container-link-background-hover;
+	color: $container-link-hover;
 
 }
 
@@ -258,8 +279,7 @@ li .recent-post:hover{
 
 .post-nav a{
 	color: inhert;
-	font-size: 3rem;
-	@include dark-text-shadow;
+	font-size: 3rem;	
 	padding: 0 40px;
 	opacity: .7;
 }
