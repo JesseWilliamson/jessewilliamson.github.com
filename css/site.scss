@@ -59,6 +59,8 @@ $container-link: $asbestos;
 $container-link-hover: #fff;
 $container-link-background-hover: $asbestos;
 
+$post-nav-link: $alizarin;
+
 $quote-background: $clouds;
 $quote-text: $concrete;
 
@@ -271,7 +273,7 @@ li .recent-post:hover{
 }
 
 .post-nav a{
-	color: inhert;
+	color: $post-nav-link;
 	font-size: 3rem;	
 	padding: 0 40px;
 	opacity: .7;
