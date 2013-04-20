@@ -120,8 +120,7 @@ nav {
 
 nav a{	
 	opacity: .85;
-	line-height: 35px;
-	font-weight: 700;	
+	line-height: 35px;	
 	padding:5px 10px;	
 	margin-left: 10px;
 }
@@ -188,6 +187,10 @@ footer{
 	padding: 20px 0;
 }
 
+footer a{
+	color: $footer-links;
+}
+
 footer a:hover{
 	text-decoration:none;
 }
@@ -233,8 +236,8 @@ li{
 	border-radius: 5px 5px 0 0;
 margin: 0px 0px 20px 0px;
 padding: 10px 20px;
-background-color: #ff7f66;
-color: white;
+background-color: $container-header-background;
+color: $container-header-text;
 }
 
 .other-posts ul{
