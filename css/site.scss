@@ -234,6 +234,7 @@ li{
 .other-posts{	
 	background-color: $container-background;
 	@include rounded-corners;
+	padding-bottom: 20px;
 }
 
 .other-posts h2{
