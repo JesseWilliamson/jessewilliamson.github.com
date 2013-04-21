@@ -9,10 +9,7 @@ synopsis: a quick KnockoutJS refactor I did, and wanted to share.
 My current project is a fairly large single page application written in [KnockoutJS]("http://knockoutjs.com"). I won't get into all of that too much, and my opinions on a straight, vanilla Knockout solution for a large project will be saved for another post. What I need to explain is this: our current task is, essentially, to retrofit the UI to a new backend. So we're going page by page, and updating bindings, etc. The directive was one of zero refactoring. Just get it working, and we'll clean it up later. My thoughts on that approach are also best saved for another time. Regardless, I simply couldn't resist myself when I came across this.
 
 Here is pared down example. The idea is that we have a list of objects that the user can choose from. For whatever reason, we need to store the currently selected item, and it's ID...separatly, as you do, I suppose.
-
-<div class="highlight">
-<pre>
-	<code class="javascript">
+{% highlight javascript %}
 	var Model = function(){
 	    var self = this;
 	    self.options = ko.observableArray([
@@ -41,25 +38,19 @@ Here is pared down example. The idea is that we have a list of objects that the 
 	}
 
 	ko.applyBindings(new Model());
-</code>
-</pre>
-</div>
+{% endhighlight %}
 
 And the view code:
 
-<div class="highlight">
-<pre>
-	<code class="html">
+{% highlight html%}
 
 	<h2>LOLWUT?</h2>
 	<ul data-bind="foreach: options">
 	    <li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"></li>
 	</ul>
 	<button data-bind="click:postTheThing">Save</button>
-</code>
-</pre>
-</div>
 
+{%endhighlight%}
 To me, this was a weird combination of things. We've got inline function calls in the HTML, which seems like a rookie move. Then we've two things a rookie probably wouldn't do: we're subscribing to the observable, and we're using ko.utils.arrayFirst. 
 
 So what does this code do? It's pretty basic actually. When you click an item, we'll call the setSelectedOptionId function with the Id of the item and update the selectedOptionId observable. Since we've subscribed to that observable, we then run a function that finds the first item in our array that has the current Id.
@@ -67,10 +58,7 @@ So what does this code do? It's pretty basic actually. When you click an item, w
 Seems like a combination of overthinking and ignorance of some foundational concepts in Knockout. A case of, "Well, I know the Id, and I need that object. How can I get it?" It's not all that terrible of a solution, except that Knockout provides a much simpler way to access items within a loop.
 
 Within a loop, if you bind to a function, Knockout will provide you access to that object. That means we can write this:
-
-<div class="highlight">
-<pre>
-	<code class="javascript">
+{% hightlight javascript %}
 	var Model = function(){
 	    var self = this;
 	    self.options = ko.observableArray([
@@ -90,35 +78,26 @@ Within a loop, if you bind to a function, Knockout will provide you access to th
 	}
 
 	ko.applyBindings(new Model());
-	</code>
-</pre>
-</div>
 
+{% endhighlight %}
 And the view:
+{% highlight html %}
 
-<div class="highlight">
-<pre>
-<code class="html">
 	<h2>DATS BETTER</h2>
 	<ul data-bind="foreach: options">
 	    <li data-bind="click: $parent.selectedOption, css: {active: $data === $parent.selectedOption()}, text: name"></li>
 	</ul>
 	<button data-bind="click:postTheThing">Save</button>
-</code>
-</pre>
-</div>
+
+{% endhighlight %}
 
 In the new code, we get replace the setSelectedOptionId function and that explicit subscription, and replace them with a single function that takes one parameter.
 
-<div class="highlight">
-<pre>
-	<code class="javascript">
+{% hightlight javascript %}	
 	self.selectOption = function(item){
 	        self.selectedOption(item);
 	    };
-</code>
-</pre>
-</div>
+{% endhightlight %}
 
 When our function is called, item will refer to the item clicked. Simple.
 
