@@ -178,4 +178,7 @@ li .recent-post:hover {
 .highlight {
   margin-bottom: 20px;
   background-color: #34495e;
-  color: #ecf0f1; }
+  color: #ecf0f1;
+  border-radius: 5px;
+  font-size: .8rem;
+  padding: 10px; }
