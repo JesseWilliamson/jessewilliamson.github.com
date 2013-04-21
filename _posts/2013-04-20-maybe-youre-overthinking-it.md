@@ -89,7 +89,7 @@ And the view:
 
 In the new code, we get replace the setSelectedOptionId function and that explicit subscription, and replace them with a single function that takes one parameter.
 
-{% hightlight javascript %}	
+{% highlight javascript %}	
 self.selectOption = function(item){
         self.selectedOption(item);
     };
