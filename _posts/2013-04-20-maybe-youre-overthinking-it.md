@@ -40,6 +40,7 @@ Here is pared down example. The idea is that we have a list of objects that the 
 	ko.applyBindings(new Model());
 
 And the view code:
+
 	<h2>LOLWUT?</h2>
 	<ul data-bind="foreach: options">
 	    <li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"></li>
