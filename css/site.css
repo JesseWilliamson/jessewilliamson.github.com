@@ -174,3 +174,8 @@ li .recent-post:hover {
 .post-nav a:hover {
   text-decoration: none;
   opacity: 1; }
+
+.higlight {
+  margin-bottom: 20px;
+  background-color: #34495e;
+  color: #ecf0f1; }

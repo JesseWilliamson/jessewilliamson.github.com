@@ -68,6 +68,10 @@ $footer-background: $asbestos;
 $footer-text: $silver;
 $footer-links: $clouds;
 
+$code-background: $wet-asphalt;
+$code-text: $clouds;
+
+
 @mixin rounded-corners{
 	border-radius: 5px;
 }
@@ -283,4 +287,9 @@ li .recent-post:hover{
 .post-nav a:hover{
 	text-decoration: none;
 	opacity: 1;
+}
+.higlight{
+	margin-bottom: 20px;
+	background-color: $code-background;
+	color: $code-text;
 }
