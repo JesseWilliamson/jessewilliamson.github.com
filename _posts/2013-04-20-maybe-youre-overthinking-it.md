@@ -57,7 +57,7 @@ So what does this code do? It's pretty basic actually. When you click an item, w
 Seems like a combination of overthinking and ignorance of some foundational concepts in Knockout. A case of, "Well, I know the Id, and I need that object. How can I get it?" It's not all that terrible of a solution, except that Knockout provides a much simpler way to access items within a loop.
 
 Within a loop, if you bind to a function, Knockout will provide you access to that object. That means we can write this:
-{% hightlight javascript %}
+{% highlight javascript %}
 	var Model = function(){
 	    var self = this;
 	    self.options = ko.observableArray([
@@ -93,7 +93,7 @@ In the new code, we get replace the setSelectedOptionId function and that explic
 self.selectOption = function(item){
         self.selectedOption(item);
     };
-{% endhightlight %}
+{% endhighlight %}
 
 When our function is called, item will refer to the item clicked. Simple.
 
