@@ -292,4 +292,7 @@ li .recent-post:hover{
 	margin-bottom: 20px;
 	background-color: $code-background;
 	color: $code-text;
+	@include rounded-corners;
+	font-size: .8rem;
+	padding: 10px;
 }
