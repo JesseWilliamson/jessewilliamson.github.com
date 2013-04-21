@@ -43,11 +43,11 @@ ko.applyBindings(new Model());
 And the view code:
 
 {% highlight html%}
-<h2>LOLWUT?</h2>
-<ul data-bind="foreach: options">
-    <li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"></li>
-</ul>
-<button data-bind="click:postTheThing">Save</button>
+&lt;h2&gt;LOLWUT?&lt;/h2&gt;
+&lt;ul data-bind="foreach: options"&gt;
+    &lt;li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button data-bind="click:postTheThing"&gt;Save&lt;/button&gt;
 {%endhighlight%}
 To me, this was a weird combination of things. We've got inline function calls in the HTML, which seems like a rookie move. Then we've two things a rookie probably wouldn't do: we're subscribing to the observable, and we're using ko.utils.arrayFirst. 
 
@@ -79,11 +79,11 @@ ko.applyBindings(new Model());
 {% endhighlight %}
 And the view:
 {% highlight html %}
-<h2>DATS BETTER</h2>
-<ul data-bind="foreach: options">
-    <li data-bind="click: $parent.selectedOption, css: {active: $data === $parent.selectedOption()}, text: name"></li>
-</ul>
-<button data-bind="click:postTheThing">Save</button>
+&lt;h2&gt;DATS BETTER&lt;/h2&gt;
+&lt;ul data-bind="foreach: options"&gt;
+    &lt;li data-bind="click: $parent.selectedOption, css: {active: $data === $parent.selectedOption()}, text: name"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;button data-bind="click:postTheThing"&gt;Save&lt;/button&gt;
 {% endhighlight %}
 
 In the new code, we get replace the setSelectedOptionId function and that explicit subscription, and replace them with a single function that takes one parameter.
