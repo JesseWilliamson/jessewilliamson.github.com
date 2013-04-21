@@ -10,44 +10,44 @@ My current project is a fairly large single page application written in [Knockou
 
 Here is pared down example. The idea is that we have a list of objects that the user can choose from. For whatever reason, we need to store the currently selected item, and it's ID...separatly, as you do, I suppose.
 {% highlight javascript %}
-	var Model = function(){
-	    var self = this;
-	    self.options = ko.observableArray([
-	    {id: 1, name: "Item1", description: "The first item"},
-	    {id: 2, name: "Item2", description: "The second item"},
-	    {id: 3, name: "Item3", description: "The third item"},
-	    {id: 4, name: "Item4", description: "The fourth item"}
-	    ]);
-	    self.selectedOption = ko.observable();
-	    self.selectedOptionId = ko.observable();
-	    self.postTheThing =  function(){
-	        //for real we do some ajax stuffs
-	        alert(JSON.stringify(self.selectedOption()));
-	    },
-	    self.setSelectedOptionId = function(id){
-	        self.selectedOptionId(id);
-	    };
-	    self.selectedOptionId.subscribe(function(){
-	        var option = ko.utils.arrayFirst(self.options(), function(item){
-	                return item.id === self.selectedOptionId();
-	            });
-	        if(option){
-	            self.selectedOption(option);
-	        }
-	    });
-	}
+var Model = function(){
+    var self = this;
+    self.options = ko.observableArray([
+    {id: 1, name: "Item1", description: "The first item"},
+    {id: 2, name: "Item2", description: "The second item"},
+    {id: 3, name: "Item3", description: "The third item"},
+    {id: 4, name: "Item4", description: "The fourth item"}
+    ]);
+    self.selectedOption = ko.observable();
+    self.selectedOptionId = ko.observable();
+    self.postTheThing =  function(){
+        //for real we do some ajax stuffs
+        alert(JSON.stringify(self.selectedOption()));
+    },
+    self.setSelectedOptionId = function(id){
+        self.selectedOptionId(id);
+    };
+    self.selectedOptionId.subscribe(function(){
+        var option = ko.utils.arrayFirst(self.options(), function(item){
+                return item.id === self.selectedOptionId();
+            });
+        if(option){
+            self.selectedOption(option);
+        }
+    });
+}
 
-	ko.applyBindings(new Model());
+ko.applyBindings(new Model());
 {% endhighlight %}
 
 And the view code:
 
 {% highlight html%}
-	<h2>LOLWUT?</h2>
-	<ul data-bind="foreach: options">
-	    <li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"></li>
-	</ul>
-	<button data-bind="click:postTheThing">Save</button>
+<h2>LOLWUT?</h2>
+<ul data-bind="foreach: options">
+    <li data-bind="click: function(){$parent.setSelectedOptionId($data.id)}, css: {active: $data.id === $parent.selectedOptionId()}, text: name"></li>
+</ul>
+<button data-bind="click:postTheThing">Save</button>
 {%endhighlight%}
 
 To me, this was a weird combination of things. We've got inline function calls in the HTML, which seems like a rookie move. Then we've two things a rookie probably wouldn't do: we're subscribing to the observable, and we're using ko.utils.arrayFirst. 
@@ -58,33 +58,33 @@ Seems like a combination of overthinking and ignorance of some foundational conc
 
 Within a loop, if you bind to a function, Knockout will provide you access to that object. That means we can write this:
 {% highlight javascript %}
-	var Model = function(){
-	    var self = this;
-	    self.options = ko.observableArray([
-	    {id: 1, name: "Item1", description: "The first item"},
-	    {id: 2, name: "Item2", description: "The second item"},
-	    {id: 3, name: "Item3", description: "The third item"},
-	    {id: 4, name: "Item4", description: "The fourth item"}
-	    ]);
-	    self.selectedOption = ko.observable();    
-	    self.postTheThing =  function(){
-	        //for real we do some ajax stuffs
-	        alert(JSON.stringify(self.selectedOption()));
-	    };
-	    self.selectOption = function(item){
-	        self.selectedOption(item);
-	    };
-	}
+var Model = function(){
+    var self = this;
+    self.options = ko.observableArray([
+    {id: 1, name: "Item1", description: "The first item"},
+    {id: 2, name: "Item2", description: "The second item"},
+    {id: 3, name: "Item3", description: "The third item"},
+    {id: 4, name: "Item4", description: "The fourth item"}
+    ]);
+    self.selectedOption = ko.observable();    
+    self.postTheThing =  function(){
+        //for real we do some ajax stuffs
+        alert(JSON.stringify(self.selectedOption()));
+    };
+    self.selectOption = function(item){
+        self.selectedOption(item);
+    };
+}
 
-	ko.applyBindings(new Model());
+ko.applyBindings(new Model());
 {% endhighlight %}
 And the view:
 {% highlight html %}
-	<h2>DATS BETTER</h2>
-	<ul data-bind="foreach: options">
-	    <li data-bind="click: $parent.selectedOption, css: {active: $data === $parent.selectedOption()}, text: name"></li>
-	</ul>
-	<button data-bind="click:postTheThing">Save</button>
+<h2>DATS BETTER</h2>
+<ul data-bind="foreach: options">
+    <li data-bind="click: $parent.selectedOption, css: {active: $data === $parent.selectedOption()}, text: name"></li>
+</ul>
+<button data-bind="click:postTheThing">Save</button>
 {% endhighlight %}
 
 In the new code, we get replace the setSelectedOptionId function and that explicit subscription, and replace them with a single function that takes one parameter.
